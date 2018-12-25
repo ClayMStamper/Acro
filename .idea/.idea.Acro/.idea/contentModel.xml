@@ -14,7 +14,6 @@
             <e p="Vector3Extensions.cs" t="Include" />
           </e>
           <e p="GetInput.cs" t="Include" />
-          <e p="IFall.cs" t="Include" />
           <e p="IJump.cs" t="Include" />
           <e p="IRun.cs" t="Include" />
           <e p="PlayerMove.cs" t="Include" />

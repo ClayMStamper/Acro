@@ -11,23 +11,26 @@ public interface IRun {
 
 public abstract class RunType : IRun {
     
-    public float speed { get; private set; }
-    public float acc { get; private set; }
+    private Vector3 velocity;
 
-    public RunType(float speed, float acc) {
-        this.speed = speed;
-        this.acc = acc;
+    private Transform _transform;
+    private readonly float _speed;
+    private float _acc;
+
+    protected RunType(Transform transform, float speed, float acc) {
+        this._speed = speed;
+        this._acc = acc;
     }
         
     public void Run(Transform transform) {
 
         if (GetInput.Forward()) {
             
-            transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            transform.Translate(Vector3.forward * Time.deltaTime * _speed);
         }
 
         if (GetInput.Back()) {
-            transform.Translate(Vector3.back * Time.deltaTime * speed);
+            transform.Translate(Vector3.back * Time.deltaTime * _speed);
         }
         
     }
@@ -35,9 +38,7 @@ public abstract class RunType : IRun {
 
 public class RunNormal : RunType {
     
-    public RunNormal(float speed, float acc) : base(speed, acc) {
-        
-    }
+    public RunNormal(Transform transform, float speed, float acc) : base(transform, speed, acc) {}
     
 }
 

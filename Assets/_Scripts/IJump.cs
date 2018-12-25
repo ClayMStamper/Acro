@@ -12,16 +12,16 @@ public abstract class JumpType : IJump {
     private readonly Vector3 _force;
 
     //defaulted to force of gravity
-    private Vector3 acceloration = new Vector3(0, -10, 0);
-    
-    public JumpType(Transform transform, int force) {
+    private readonly Vector3 acceleration = new Vector3(0, -10, 0);
+
+    protected JumpType(Transform transform, int force) {
         this._force = new Vector3(0,force,0);
         this._transform = transform;
     }
     
     public void Jump() {
 
-        Vector3 velocity = acceloration;
+        Vector3 velocity = acceleration;
         
         if (GetInput.Up()) {
             velocity += _force;

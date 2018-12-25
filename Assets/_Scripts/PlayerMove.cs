@@ -8,7 +8,7 @@ public class PlayerMove : MonoBehaviour {
     private IJump _jump;
 
     private void Start() {
-        _run = new RunNormal(2, .1f);
+        _run = new RunNormal(transform, 2, .1f);
         _jump = new JumpNormal(transform, 15);
     }
     
