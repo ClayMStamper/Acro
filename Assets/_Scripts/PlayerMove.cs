@@ -9,11 +9,11 @@ public class PlayerMove : MonoBehaviour {
 
     private void Start() {
         _run = new RunNormal(transform, 2, .1f);
-        _jump = new JumpNormal(transform, 15);
+        _jump = new JumpNormal(transform, GetComponent<Rigidbody>(), 15);
     }
     
     private void Update() {
-        _run.Run(transform);
+        _run.Run();
         _jump.Jump();
     }
 }

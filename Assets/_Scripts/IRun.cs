@@ -5,7 +5,7 @@ using UnityEngine;
 
 public interface IRun {
 
-    void Run(Transform transform);
+    void Run();
 
 }
 
@@ -18,19 +18,19 @@ public abstract class RunType : IRun {
     private float _acc;
 
     protected RunType(Transform transform, float speed, float acc) {
+        this._transform = transform;
         this._speed = speed;
         this._acc = acc;
     }
         
-    public void Run(Transform transform) {
+    public void Run() {
 
         if (GetInput.Forward()) {
-            
-            transform.Translate(Vector3.forward * Time.deltaTime * _speed);
+            _transform.Translate(Vector3.forward * Time.deltaTime * _speed);
         }
 
         if (GetInput.Back()) {
-            transform.Translate(Vector3.back * Time.deltaTime * _speed);
+            _transform.Translate(Vector3.back * Time.deltaTime * _speed);
         }
         
     }
