@@ -3,13 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b58e52b2-d5bd-4d3a-81e4-72c0ce6f70cb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Acro/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Acro/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Design/medieval-fantasy-castle-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Design/medieval-fantasy-castle-2.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Design/Animation/Punch.anim.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Design/Animation/Punch.anim.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Design/Animation/_Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Design/Animation/_Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/Environment.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/Environment.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Behaviours/Attack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Behaviours/Attack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/GetInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/GetInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerAttack.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerAttack.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/PlayerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/PlayerMove.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,12 +37,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="4564" />
+          <entry key="cs" value="4744" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="4564" />
+          <entry key="C#" value="4744" />
         </counts>
       </usages-collector>
     </session>
@@ -87,19 +84,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Behaviours/Attack.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            <state relative-caret-position="368">
+              <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
               <folding>
-                <marker date="1545856642929" expanded="true" signature="6:78" ph="..." />
-                <marker date="1545856642929" expanded="true" signature="171:817" ph="{...}" />
-                <marker date="1545856642929" expanded="true" signature="297:326" ph="{...}" />
-                <marker date="1545856642929" expanded="true" signature="357:674" ph="{...}" />
-                <marker date="1545856642929" expanded="true" signature="869:920" ph="{...}" />
-                <marker date="1545856642929" expanded="true" signature="897:913" ph="{...}" />
-                <marker date="1545856642929" expanded="true" signature="964:1453" ph="{...}" />
-                <marker date="1545856642929" expanded="true" signature="1074:1286" ph="{...}" />
-                <marker date="1545856642929" expanded="true" signature="1333:1367" ph="{...}" />
-                <marker date="1545856642929" expanded="true" signature="1416:1450" ph="{...}" />
+                <marker date="1545865430783" expanded="true" signature="6:78" ph="..." />
+                <marker date="1545865430783" expanded="true" signature="171:820" ph="{...}" />
+                <marker date="1545865430783" expanded="true" signature="297:326" ph="{...}" />
+                <marker date="1545865430783" expanded="true" signature="357:677" ph="{...}" />
+                <marker date="1545865430783" expanded="true" signature="399:452" ph="/* if (_attack.MoveNext()) ... */" />
+                <marker date="1545865430783" expanded="true" signature="864:1379" ph="{...}" />
+                <marker date="1545865430783" expanded="true" signature="974:1212" ph="{...}" />
+                <marker date="1545865430783" expanded="true" signature="1259:1293" ph="{...}" />
+                <marker date="1545865430783" expanded="true" signature="1342:1376" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -271,12 +267,12 @@
       <updated>1545680596849</updated>
       <workItem from="1545680601047" duration="986000" />
       <workItem from="1545681894846" duration="2000" />
-      <workItem from="1545681917763" duration="22602000" />
+      <workItem from="1545681917763" duration="24245000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23590000" />
+    <option name="totallyTimeSpent" value="25233000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,19 +480,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/_Scripts/Behaviours/Attack.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="368">
+          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
           <folding>
-            <marker date="1545856642929" expanded="true" signature="6:78" ph="..." />
-            <marker date="1545856642929" expanded="true" signature="171:817" ph="{...}" />
-            <marker date="1545856642929" expanded="true" signature="297:326" ph="{...}" />
-            <marker date="1545856642929" expanded="true" signature="357:674" ph="{...}" />
-            <marker date="1545856642929" expanded="true" signature="869:920" ph="{...}" />
-            <marker date="1545856642929" expanded="true" signature="897:913" ph="{...}" />
-            <marker date="1545856642929" expanded="true" signature="964:1453" ph="{...}" />
-            <marker date="1545856642929" expanded="true" signature="1074:1286" ph="{...}" />
-            <marker date="1545856642929" expanded="true" signature="1333:1367" ph="{...}" />
-            <marker date="1545856642929" expanded="true" signature="1416:1450" ph="{...}" />
+            <marker date="1545865430783" expanded="true" signature="6:78" ph="..." />
+            <marker date="1545865430783" expanded="true" signature="171:820" ph="{...}" />
+            <marker date="1545865430783" expanded="true" signature="297:326" ph="{...}" />
+            <marker date="1545865430783" expanded="true" signature="357:677" ph="{...}" />
+            <marker date="1545865430783" expanded="true" signature="399:452" ph="/* if (_attack.MoveNext()) ... */" />
+            <marker date="1545865430783" expanded="true" signature="864:1379" ph="{...}" />
+            <marker date="1545865430783" expanded="true" signature="974:1212" ph="{...}" />
+            <marker date="1545865430783" expanded="true" signature="1259:1293" ph="{...}" />
+            <marker date="1545865430783" expanded="true" signature="1342:1376" ph="{...}" />
           </folding>
         </state>
       </provider>

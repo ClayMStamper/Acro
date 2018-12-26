@@ -17,7 +17,7 @@ public abstract class LightAttackType : IAttack {
     public void Attack() {
 
         if (_attack != null)
-            if (!_attack.MoveNext())
+            if (_attack.MoveNext())
                 return;
         
         if (GetInput.ForwardLight())
@@ -35,14 +35,6 @@ public abstract class LightAttackType : IAttack {
 
 }
 
-public abstract class SpecialAttackType : IAttack {
-
-    public void Attack() {
-        
-    }
-    
-}
-
 public class Fist_Light : LightAttackType {
     
     public Fist_Light(Animator anim) : base(anim) { }
@@ -52,9 +44,9 @@ public class Fist_Light : LightAttackType {
         Debug.Log("Forward Light: Punching");
         _anim.SetTrigger("Punch");
 
-        do {
-            yield return null;
-        } while (_anim.GetComponent<Animation>().isPlaying);
+        yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(1).length);
+        
+        Debug.Log("Done punching");
         
     }
 
