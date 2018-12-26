@@ -57,16 +57,34 @@ public static class GetInput {
 
     }
     
-    public static bool Light() {
+    public static bool UpLight() {
 
-        if (Input.GetKey(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) && Up())
             return true;
 
         return false;
 
     }
     
-    public static bool Heavy() {
+    public static bool ForwardLight() {
+
+        if (Input.GetKeyDown(KeyCode.I) && Forward())
+            return true;
+
+        return false;
+
+    }
+    
+    public static bool DownLight() {
+
+        if (Input.GetKeyDown(KeyCode.I) && Down())
+            return true;
+
+        return false;
+
+    }
+    
+    public static bool HeavyAttack() {
 
         if (Input.GetKey(KeyCode.O))
             return true;

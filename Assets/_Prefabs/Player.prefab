@@ -490,7 +490,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   acceleration: 15
-  jumpForce: 400
+  jumpForce: 500
   maxJumps: 3
 --- !u!1 &3029921204948281074
 GameObject:

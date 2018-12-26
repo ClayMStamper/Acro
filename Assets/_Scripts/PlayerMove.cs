@@ -35,7 +35,7 @@ public class PlayerMove : MonoBehaviour {
 
     private void OnCollisionEnter(Collision other) {
         
-        Debug.Log("Colliding with: " + other.gameObject.name);
+//        Debug.Log("Colliding with: " + other.gameObject.name);
         
         //check if other is the ground
         _jump.CheckIfLanded(other.transform);
