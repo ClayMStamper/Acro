@@ -32,13 +32,13 @@ public static class GetInput {
     
     public static bool Up() {
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W))
             return true;
 
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
             return true;
         
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
             return true;
 
         return false;
@@ -47,10 +47,10 @@ public static class GetInput {
     
     public static bool Down() {
 
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
             return true;
 
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
             return true;
 
         return false;

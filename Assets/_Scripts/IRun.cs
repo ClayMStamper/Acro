@@ -1,19 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using _Scripts.Extensions;
 
 
-public interface IRun {
-
-    void Run();
-
-}
+public interface IRun { void Run();}
 
 public abstract class RunType : IRun {
     
-    private Vector3 velocity;
+    private Vector3 _velocity;
 
-    private Transform _transform;
+    private readonly Transform _transform;
     private readonly float _speed;
     private float _acc;
 
@@ -22,18 +19,35 @@ public abstract class RunType : IRun {
         this._speed = speed;
         this._acc = acc;
     }
-        
+
     public void Run() {
-
-        if (GetInput.Forward()) {
-            _transform.Translate(Vector3.forward * Time.deltaTime * _speed);
-        }
-
-        if (GetInput.Back()) {
-            _transform.Translate(Vector3.back * Time.deltaTime * _speed);
-        }
+        
+        Accelerate();
+        Debug.Log("Velocity: " + _velocity);
+        Move();
         
     }
+    
+    private void Accelerate() {
+
+        if (GetInput.Forward()) {
+            float xVelocity = Mathf.Clamp(_velocity.x + _acc * Time.deltaTime, 0, _speed);
+            _velocity = _velocity.WithValues(x: xVelocity);
+        } else if (GetInput.Back()) {
+            float xVelocity = Mathf.Clamp(_velocity.x - _acc * Time.deltaTime, -_speed, 0);
+            Debug.Log(xVelocity);
+            _velocity = _velocity.WithValues(x: xVelocity);
+        }
+        else {
+            _velocity = _velocity.Lerp(Vector3.zero, Time.deltaTime * 3);
+        }
+                
+    }
+
+    private void Move() {
+        _transform.Translate(_velocity * Time.deltaTime);
+    }
+    
 }
 
 public class RunNormal : RunType {

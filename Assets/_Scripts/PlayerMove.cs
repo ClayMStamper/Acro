@@ -3,17 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMove : MonoBehaviour {
+
+    public float speed = 2;
+    public float acceleration = 0.01f;
+    public float jumpForce = 500;
     
-    private IRun _run;
-    private IJump _jump;
+    public int maxJumps = 3;
+    
+    private RunType _run;
+    private JumpType _jump;
 
     private void Start() {
-        _run = new RunNormal(transform, 2, .1f);
-        _jump = new JumpNormal(transform, GetComponent<Rigidbody>(), 15);
+        
+        _run = 
+            new RunNormal(transform, 
+            speed: speed, 
+            acc: acceleration);
+        
+        _jump = 
+            new JumpNormal(transform, 
+            GetComponent<Rigidbody>(), 
+            force: jumpForce, 
+            maxJumps: maxJumps);
+        
     }
     
     private void Update() {
         _run.Run();
-        _jump.Jump();
+        _jump.FallOrJump();
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        
+        //check if other is the ground
+        _jump.CheckIfLanded(other.transform);
+        
     }
 }
