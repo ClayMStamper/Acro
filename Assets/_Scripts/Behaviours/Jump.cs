@@ -72,7 +72,7 @@ public abstract class JumpType : IJump {
 }
 
 public class JumpNormal : JumpType {
-    public JumpNormal(Transform transform, Rigidbody rb, float force, int maxJumps) : base(transform, rb, force, maxJumps) { }
+    public JumpNormal(Transform transform, Rigidbody rb, float force, int maxJumps, Animator anim) : base(transform, rb, force, maxJumps) { }
 }
     
     

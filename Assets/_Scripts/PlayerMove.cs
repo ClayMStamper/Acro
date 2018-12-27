@@ -18,13 +18,15 @@ public class PlayerMove : MonoBehaviour {
         _run = 
             new RunNormal(transform, 
             speed: speed, 
-            acc: acceleration);
+            acc: acceleration, 
+            anim: GetComponent<Animator>());
         
         _jump = 
             new JumpNormal(transform, 
             GetComponent<Rigidbody>(), 
             force: jumpForce, 
-            maxJumps: maxJumps);
+            maxJumps: maxJumps, 
+            anim: GetComponent<Animator>());
         
     }
     
@@ -34,8 +36,6 @@ public class PlayerMove : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision other) {
-        
-//        Debug.Log("Colliding with: " + other.gameObject.name);
         
         //check if other is the ground
         _jump.CheckIfLanded(other.transform);

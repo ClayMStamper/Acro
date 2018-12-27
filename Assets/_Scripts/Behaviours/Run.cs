@@ -50,7 +50,7 @@ public abstract class RunType : IRun {
 
 public class RunNormal : RunType {
     
-    public RunNormal(Transform transform, float speed, float acc) : base(transform, speed, acc) {}
+    public RunNormal(Transform transform, float speed, float acc, Animator anim) : base(transform, speed, acc) {}
     
 }
 
