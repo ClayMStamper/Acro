@@ -44,6 +44,21 @@ public static class GetInput {
         return false;
 
     }
+
+    public static bool UpFlick() {
+        
+        if (Input.GetKey(KeyCode.W))
+            return true;
+
+        if (Input.GetKey(KeyCode.UpArrow))
+            return true;
+        
+        if (Input.GetKey(KeyCode.Space))
+            return true;
+
+        return false;
+        
+    }
     
     public static bool Down() {
 
@@ -59,16 +74,13 @@ public static class GetInput {
     
     public static bool UpLight() {
 
-        if (Input.GetKeyDown(KeyCode.I) && Up())
-            return true;
-
-        return false;
+        return (Input.GetKey(KeyCode.I) && UpFlick());
 
     }
     
     public static bool ForwardLight() {
 
-        if (Input.GetKeyDown(KeyCode.I) && Forward())
+        if (Input.GetKeyDown(KeyCode.I) && (Forward() || Back())) 
             return true;
 
         return false;

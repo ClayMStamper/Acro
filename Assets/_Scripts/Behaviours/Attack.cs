@@ -41,17 +41,17 @@ public class Fist_Light : LightAttackType {
     
     protected override IEnumerator FLight() {
         
-        Debug.Log("Forward Light: Punching");
         _anim.SetTrigger("Punch");
-
         yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(1).length);
         
-        Debug.Log("Done punching");
         
     }
 
     protected override IEnumerator UpLight() {
-        yield return null;
+        
+        _anim.SetTrigger("UpperCut");
+        yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(1).length);
+        
     }
 
     protected override IEnumerator DownLight() {
