@@ -15,10 +15,14 @@ public class PlayerStats : MonoBehaviour, IGetHit {
     public void OnHit(int rawDamage) {
         int damage = Mathf.Clamp (rawDamage - armor.GetValue(), 0, int.MaxValue); //damage after armor
         currentHealth -= damage;
+        
+        if (currentHealth <= 0)
+            Die();
+        
     }
 
     private void Die() {
-        
+        Destroy(gameObject);
     }
 
 }

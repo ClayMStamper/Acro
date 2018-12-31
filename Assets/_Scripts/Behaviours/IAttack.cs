@@ -3,29 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public interface IAttack {void Attack();}
+public interface IGetHit {void OnHit(int rawDamage);}
 
 public abstract class LightAttackType : IAttack {
 
-    protected readonly Animator _anim;
+    protected readonly Animator anim;
 
-    private IEnumerator _attack;
+    public IEnumerator attack { get; private set; }
     
     protected LightAttackType(Animator anim) {
-        _anim = anim;
+        this.anim = anim;
     }
     
     public void Attack() {
 
-        if (_attack != null)
-            if (_attack.MoveNext())
+        if (attack != null)
+            if (attack.MoveNext())
                 return;
         
         if (GetInput.ForwardLight())
-            _attack = FLight();
+            attack = FLight();
         if(GetInput.UpLight())
-            _attack = UpLight();
+            attack = UpLight();
         if(GetInput.DownLight())
-            _attack = DownLight();
+            attack = DownLight();
         
     }
 

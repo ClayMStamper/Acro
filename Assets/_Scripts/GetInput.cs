@@ -74,13 +74,13 @@ public static class GetInput {
     
     public static bool UpLight() {
 
-        return (Input.GetKey(KeyCode.I) && UpFlick());
+        return (Input.GetKey(KeyCode.J) && UpFlick());
 
     }
     
     public static bool ForwardLight() {
 
-        if (Input.GetKeyDown(KeyCode.I) && (Forward() || Back())) 
+        if (Input.GetKeyDown(KeyCode.J) && (Forward() || Back())) 
             return true;
 
         return false;
@@ -89,7 +89,7 @@ public static class GetInput {
     
     public static bool DownLight() {
 
-        if (Input.GetKeyDown(KeyCode.I) && Down())
+        if (Input.GetKeyDown(KeyCode.J) && Down())
             return true;
 
         return false;

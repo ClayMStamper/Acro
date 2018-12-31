@@ -12,17 +12,17 @@ public class FistLight : LightAttackType {
     
     protected override IEnumerator FLight() {
 
-        _anim.SetBool("Punch", true);
-        yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(1).length);
-        _anim.SetBool("Punch", false);
+        anim.SetBool("Punch", true);
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(1).length);
+        anim.SetBool("Punch", false);
 
     }
 
     protected override IEnumerator UpLight() {
 
-        _anim.SetBool("Uppercut", true);
-        yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(1).length);
-        _anim.SetBool("Uppercut", false);
+        anim.SetBool("Uppercut", true);
+        yield return new WaitForSeconds(anim.GetCurrentAnimatorStateInfo(1).length);
+        anim.SetBool("Uppercut", false);
 
 
     }
