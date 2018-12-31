@@ -35,27 +35,3 @@ public abstract class LightAttackType : IAttack {
 
 }
 
-public class Fist_Light : LightAttackType {
-    
-    public Fist_Light(Animator anim) : base(anim) { }
-    
-    protected override IEnumerator FLight() {
-        
-        _anim.SetTrigger("Punch");
-        yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(1).length);
-        
-        
-    }
-
-    protected override IEnumerator UpLight() {
-        
-        _anim.SetTrigger("UpperCut");
-        yield return new WaitForSeconds(_anim.GetCurrentAnimatorStateInfo(1).length);
-        
-    }
-
-    protected override IEnumerator DownLight() {
-        yield return null;
-    }
-
-}

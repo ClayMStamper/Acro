@@ -7,7 +7,7 @@ public class PlayerAttack : MonoBehaviour {
     private LightAttackType _lightAttack;
 
     private void Start() {
-        _lightAttack = new Fist_Light(GetComponent<Animator>());
+        _lightAttack = new FistLight(GetComponent<Animator>());
     }
 
     private void Update() {
